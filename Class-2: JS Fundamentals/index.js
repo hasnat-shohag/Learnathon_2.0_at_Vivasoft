@@ -1,12 +1,24 @@
-var hoistingIntro = "Hi there, I am a string one.";
+for (var i = 0; i < 5; i++) {
+	setTimeout(() => {
+	  console.log(i);
+	}, 2000);
+  }
+  
+
+
+
+
+
+
+// var hoistingIntro = "Hi there, I am a string one.";
  
-function hoistingFunc() {
-	console.log(hoistingIntro); // Undefined Why?
-	var hoistingIntro = "Hi there, I am a string two";
-	console.log(hoistingIntro);
-}
+// function hoistingFunc() {
+// 	console.log(hoistingIntro); // Undefined Why?
+// 	var hoistingIntro = "Hi there, I am a string two";
+// 	console.log(hoistingIntro);
+// }
  
-hoistingFunc();
+// hoistingFunc();
 
 
 
