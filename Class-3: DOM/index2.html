@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling and Capturing</title>
+<!-- <!– Some css to identify the divs easily –> -->
+<style>
+    div {
+    border: 1px solid black;
+    }
+    #grandparent {
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    }
+    #parent {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    }
+    #child {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    }
+</style>
+
+</head>
+<body>
+    <div id="grandparent">
+        Grandparent
+        <div id="parent">
+            Parent
+            <div id="child">
+                Child
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling and Capturing</title>
+ 
+<!-- <!– CSS Style for Better Visualization —> -->
+<style>
+    body {
+        height: 100vh;
+    }
+    h2 { text-align: center; }
+    .mid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+    }
+    .hw300 {
+        height: 300px;
+        width: 300px;
+    }
+    .hw200 {
+        height: 200px;
+        width: 200px;
+    }
+    .hw100 {
+        height: 100px;
+        width: 100px;
+    }
+    #red { background-color: red; }
+    #green { background-color: green; }
+    #skyblue { background-color: skyblue; }
+    #blue { background-color: blue; }
+    #purple { background-color: purple; }
+    #gold { background-color: goldenrod; }
+</style>
+</head>
+
+<body class="mid" style="cursor: auto;">
+<!-- <!– Event Bubbling Section —> -->
+    <h2>
+        Event Bubbling
+        <div id="red" class="mid hw300">
+            <div id="green" class="mid hw200">
+                <div id="skyblue" class="mid hw100">
+                Click Me
+                </div>
+            </div>
+        </div>
+    </h2>
+<!-- <!– Event Capturing Section —> -->
+    <h2>
+        Event Capturing
+        <div id="blue" class="mid hw300">
+            <div id="purple" class="mid hw200">
+                <div id="gold" class="mid hw100">
+                    Click Me
+                </div>
+            </div>
+        </div>
+    </h2>
+    <script src="script.js"></script>
+</body>
+</html>
