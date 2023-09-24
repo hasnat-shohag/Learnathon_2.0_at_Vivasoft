@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sortable Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="sortable-table">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Name</th>
+                <th onclick="sortTable(1)">Age</th>
+                <th onclick="sortTable(2)">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>30</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>25</td>
+                <td>60000</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>35</td>
+                <td>45000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function sortTable(columnIndex) {
+            const table = document.getElementById('sortable-table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            // Sort the rows based on the values in the selected column
+            rows.sort((a, b) => {
+                const cellA = a.querySelectorAll('td')[columnIndex].textContent;
+                const cellB = b.querySelectorAll('td')[columnIndex].textContent;
+                return cellA.localeCompare(cellB);
+            });
+
+            // Clear the table body
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
+            }
+
+            // Append the sorted rows back to the table
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+</html> 
+

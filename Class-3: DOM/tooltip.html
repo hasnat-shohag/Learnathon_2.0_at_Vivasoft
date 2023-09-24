@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tooltip Example</title>
+    <style>
+        /* Tooltip container styles */
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            z-index: 1; /* Ensure it's above other content */
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <p data-tooltip="This is a tooltip">Hover over me</p>
+    <p data-tooltip="Another tooltip">Hover over me too</p>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        const tooltip = document.getElementById('tooltip');
+
+        // Add mouseover event listeners to elements with data-tooltip attribute
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseover', (e) => {
+                const tooltipText = element.getAttribute('data-tooltip');
+                tooltip.textContent = tooltipText;
+
+                // Position the tooltip relative to the mouse cursor
+                tooltip.style.left = (e.pageX + 10) + 'px';
+                tooltip.style.top = (e.pageY + 10) + 'px';
+
+                // Display the tooltip
+                tooltip.style.display = 'block';
+            });
+
+            element.addEventListener('mouseout', () => {
+                // Hide the tooltip when the mouse leaves the element
+                tooltip.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
