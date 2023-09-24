@@ -1,0 +1,145 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tree Menu Example</title>
+  <style>
+    .tree-node {
+      cursor: pointer;
+      padding-left: 20px;
+    }
+    
+    .tree-node.collapsed::before {
+      content: '\25B8';  /*Unicode character for right-pointing triangle (collapsed) */
+      padding-right: 5px;
+    }
+    .tree-node.expanded::before {
+      content: '\25BE'; /*Unicode character for down-pointing triangle (expanded) */
+      padding-right: 5px;
+    }
+    .tree-children {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <ul id="tree">
+        <li class="tree-node">Node 1
+            <ul class="tree-children">
+                <li class="tree-node">Node 1.1
+                    <ul class="tree-children">
+                        <li class="tree-node">Node 1.1.1</li>
+                        <li class="tree-node">Node 1.1.2</li>
+                    </ul>
+                </li>
+                <li class="tree-node">Node 1.2</li>
+            </ul>
+        </li>
+        <li class="tree-node">Node 2</li>
+        <li class="tree-node">Node 3
+            <ul class="tree-children">
+                <li class="tree-node">Node 3.1</li>
+            </ul>
+        </li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const treeNodes = document.querySelectorAll('.tree-node');
+
+      // Add click event listeners to tree nodes
+      treeNodes.forEach(function(node) {
+        node.addEventListener('click', function() {
+          const children = node.querySelector('.tree-children');
+          if (children) {
+            if (children.style.display === 'none' || children.style.display === '') {
+              children.style.display = 'block';
+              node.classList.remove('collapsed');
+              node.classList.add('expanded');
+            } else {
+              children.style.display = 'none';
+              node.classList.remove('expanded');
+              node.classList.add('collapsed');
+            }
+          }
+        });
+      });
+    });
+  </script> 
+</body>
+</html> 
+--> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sortable Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="sortable-table">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Name</th>
+                <th onclick="sortTable(1)">Age</th>
+                <th onclick="sortTable(2)">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>30</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>25</td>
+                <td>60000</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>35</td>
+                <td>45000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function sortTable(columnIndex) {
+            const table = document.getElementById('sortable-table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            // Sort the rows based on the values in the selected column
+            rows.sort((a, b) => {
+                const cellA = a.querySelectorAll('td')[columnIndex].textContent;
+                const cellB = b.querySelectorAll('td')[columnIndex].textContent;
+                return cellA.localeCompare(cellB);
+            });
+
+            // Clear the table body
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
+            }
+
+            // Append the sorted rows back to the table
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+</html>
