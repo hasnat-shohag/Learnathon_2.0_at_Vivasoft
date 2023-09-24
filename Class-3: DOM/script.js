@@ -93,3 +93,16 @@ console.log('It works!');
 // goldDiv.addEventListener('click', () => {
 //     console.log('Golden box clicked');
 // }, true)
+
+
+// document.getElementById('buttons').addEventListener('click', event => {
+//     if (event.target.className === 'buttonClass') {
+//         console.log('Click!');
+//     }
+// });
+
+container.onclick = function(event) {
+    if (event.target.className != 'remove-button') return;
+    let pane = event.target.closest('.pane');
+    pane.remove();
+};
