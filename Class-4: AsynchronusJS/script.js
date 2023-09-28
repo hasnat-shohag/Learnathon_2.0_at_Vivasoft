@@ -162,18 +162,96 @@
 
 //                Call Back Function
 
-function arrr(num){
-  let arr = [];
-  for(let i = num; i<= 3; i++) arr.push(i);
-  return arr;
+// function arrr(num){
+//   let arr = [];
+//   for(let i = num; i<= 3; i++) arr.push(i);
+//   return arr;
+// }
+
+// function performOperation(number, callback) {
+//   const result = callback(number);
+//   console.log(`Callback Function Result: ${result}`);
+// }
+
+// const inputNumber = 1;
+
+// performOperation(inputNumber,arrr);
+
+// loadScript("/article/promise-chaining/one.js")
+//   .then(function (script) {
+//     return loadScript("/article/promise-chaining/two.js");
+//   })
+//   .then(function (script) {
+//     return loadScript("/article/promise-chaining/three.js");
+//   })
+//   .then(function (script) {
+//     one();
+//     two();
+//     three();
+//   });
+
+// function sleep(delay) {
+//   return new Promise((resolve) => setTimeout(resolve, delay));
+// }
+// function sumAsync(x, y) {
+//   return new Promise((resolve, reject) => {
+//     sleep(3000).then(() => {
+//       resolve(x + y);
+//     });
+//   });
+// }
+
+// async function call_sum () {
+//   const result = await sumAsync(5, 7);
+//   console.log("The result of the addition is:", result);
+// }
+
+// call_sum();
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1', {
+//  method: 'GET'
+// })
+// .then(response => response.json())
+// .then(data => console.log(data))
+
+// function convertToInteger(input) {
+//   let result = Number.parseInt(input);
+//   if (!result) {
+//     return "This data can't be converted to integer.";
+//   } else {
+//     return result;
+//   }
+// }
+
+// let result = convertToInteger("25");
+// console.log(result); // 25
+
+// result = convertToInteger("String");
+// console.log(result); // This data can't be
+
+// try {
+//   JSON.parse('<html></html>');
+//  } catch (e) {
+//  if (e instanceof SyntaxError) {
+//  console.log('I caught a SyntaxError! I’ll handle it specifically here.');
+//  } else {
+//  console.log(
+//  'I caught an error, but it wasn’t a SyntaxError. I handle all non-SyntaxErrors here.'
+//  );
+//  }
+//  }
+
+// try {
+//   console.log(a);
+// } catch (error) {
+//   console.log("An error caught");
+//   console.log("Error message: " + error);
+// }
+
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note – error messages will vary depending on browser
 }
-
-function performOperation(number, callback) {
-  const result = callback(number);
-  console.log(`Callback Function Result: ${result}`);
-}
-
-const inputNumber = 1; 
-
-
-performOperation(inputNumber,arrr);
