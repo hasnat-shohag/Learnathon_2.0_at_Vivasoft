@@ -335,35 +335,49 @@
 
 // --------------------------Object to Class
 
-const myCar = {
-	make: "Ford",
-	model: "Mustang",
-	year: 1969,
-	start: function () {
-		console.log("Engine started");
-	},
-	stop: function () {
-		console.log("Engine stoped");
-	},
-};
+// const myCar = {
+// 	make: "Ford",
+// 	model: "Mustang",
+// 	year: 1969,
+// 	start: function () {
+// 		console.log("Engine started");
+// 	},
+// 	stop: function () {
+// 		console.log("Engine stoped");
+// 	},
+// };
 
 
-// console.log(myCar);
+// // console.log(myCar);
 
-class MyCar {
-	constructor(make, model, year) {
-		this.make = make;
-		this.model = model;
-		this.year = year;
-		this.start = function () {
-			console.log("Engine started");
-		};
-		this.stop = function () {
-			console.log("Engine stoped");
-		};
-	}
-}
+// class MyCar {
+// 	constructor(make, model, year) {
+// 		this.make = make;
+// 		this.model = model;
+// 		this.year = year;
+// 		this.start = function () {
+// 			console.log("Engine started");
+// 		};
+// 		this.stop = function () {
+// 			console.log("Engine stoped");
+// 		};
+// 	}
+// }
 
-const obj = new MyCar("Toyota", "Hybrid", 1964);
+// const obj = new MyCar("Toyota", "Hybrid", 1964);
 // console.log(obj.start());
 // obj.start();
+
+// var x = 5;
+
+// function a() {
+//     console.log("HI");
+// }
+
+console.log(x);
+var x = 2;
+fun();
+function fun(){
+    var x = 6;
+    console.log(x);
+}
