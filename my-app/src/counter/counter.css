@@ -7,3 +7,6 @@
 .btn:hover{
     color: rgb(255, 36, 36);
 }
+*{
+    font-size: 25px;
+}

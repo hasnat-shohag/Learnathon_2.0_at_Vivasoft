@@ -6,8 +6,10 @@ import Counter from "./counter/useReducer";
 function App() {
     return (
         <div className="App">
-            <Button content = 'Increment'/>
-            <Button content = 'Decrement'/>
+            {/* <Button content = 'Increment'/>
+            <Button content = 'Decrement'/> */}
+            <Counter />
+            <Counter />
             <Counter />
         </div>
     );
