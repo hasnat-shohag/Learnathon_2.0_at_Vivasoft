@@ -1,8 +1,8 @@
+import App from "../App";
+import FormSubmit from "../Components/FormSubmit";
+import Nav from "../Components/Nav";
+
 const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    );
+    return <App />;
 };
 export default Home;
