@@ -6,6 +6,7 @@ import FormSubmit from "./Components/FormSubmit";
 import Nav from "./Components/Nav";
 import _useState from "./Components/useState";
 import { _useEffect } from "./Components/_useEffect";
+import { _useReducer } from "./Components/_useReducer";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <FormSubmit />
             <_useState />
             {/* <_useEffect /> */}
+            <_useReducer />
         </div>
     );
 }
