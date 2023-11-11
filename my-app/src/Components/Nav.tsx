@@ -6,7 +6,7 @@ const Nav = () => {
         <div className="nav" style={{}}>
             <ul style={{display: 'flex', justifyContent:'center', }}>
                 <li >
-                    <Link to={`/Home`}>Home</Link>
+                    <Link to={`/`}>Home</Link>
                 </li>
                 <li>
                     <Link to={`/Users`}>Users</Link>

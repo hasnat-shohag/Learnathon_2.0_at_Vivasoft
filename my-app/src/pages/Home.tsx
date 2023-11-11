@@ -1,8 +1,12 @@
-import App from "../App";
 import FormSubmit from "../Components/FormSubmit";
 import Nav from "../Components/Nav";
 
 const Home = () => {
-    return <App />;
+    return (
+        <div style={{textAlign: 'center'}}>
+            <Nav/>
+            <FormSubmit/>
+        </div>
+    );
 };
 export default Home;

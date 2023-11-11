@@ -1,6 +1,4 @@
-import exp from "constants";
 import { Link, useParams } from "react-router-dom";
-import Home from "../pages/Home";
 import Nav from "./Nav";
 
 const User = () => {

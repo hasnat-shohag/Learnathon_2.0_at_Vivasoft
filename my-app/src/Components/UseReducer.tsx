@@ -4,7 +4,7 @@ const reducer = (state: number, action: any) => {
     else if (action.type === "decrement") return state - action.payload;
     else return state;
 };
-export const _useReducer = () => {
+const UseReducer = () => {
     const [count, dispatch] = useReducer(reducer, 0);
     return (
         <>
@@ -26,3 +26,4 @@ export const _useReducer = () => {
         </>
     );
 };
+export  default UseReducer;

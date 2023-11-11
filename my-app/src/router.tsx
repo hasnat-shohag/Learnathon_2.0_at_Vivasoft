@@ -1,18 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import User from "./Components/User";
 import Users from "./Components/Users";
+import Counter from "./Components/usecontext/Counter";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
-    },
-    {
-        path: "/Home",
         element: <Home />,
     },
     {
@@ -30,6 +26,10 @@ const router = createBrowserRouter([
     {
         path: "/Users",
         element: <Users />,
+    },
+    {
+        path: "/Counter",
+        element: <Counter />,
     },
 ]);
 

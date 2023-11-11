@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
-const _useState = () => {
+const UseState = () => {
     const [count, setCount] = useState(0);
     const handleclick = () => {
         setCount((prevState) => prevState + 1);
@@ -17,4 +17,4 @@ const _useState = () => {
     );
 };
 
-export default _useState;
+export default UseState;

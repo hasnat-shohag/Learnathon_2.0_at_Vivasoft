@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const _useEffect = () => {
+export const UseEffect = () => {
     useEffect(() => {
         //? fetch, eventListener, setInterval, setTimeout
         console.log("This is useEffect");
@@ -12,5 +12,5 @@ export const _useEffect = () => {
         }, 200);
     }, []);
     // dependency array: we can define for which parameter the function should be re-render
-    return <div>_useEffect</div>;
+    return <div>UseEffect</div>;
 };
